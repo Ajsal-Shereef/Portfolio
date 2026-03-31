@@ -124,6 +124,36 @@ export const experience: ExperienceItem[] = [
   },
 ];
 
+export type TeachingItem = {
+  role: string;
+  institution: string;
+  description: string;
+};
+
+export const teaching: TeachingItem[] = [
+  {
+    role: "Graduate Research Teaching Fellow",
+    institution: "Deakin University",
+    description: "Conducted workshop sessions and marked assessments.",
+  },
+  {
+    role: "Sessional Academic",
+    institution: "Deakin University",
+    description: "Assisted the lecturer and handled QA sessions for course units.",
+  },
+  {
+    role: "Casual Research Assistant",
+    institution: "Deakin University",
+    description:
+      "Managed robotics lab equipment and demonstrated research prototypes to visiting school students.",
+  },
+  {
+    role: "Maths Tutor",
+    institution: "EzyMaths",
+    description: "Private mathematics home tutoring for grade 9–12.",
+  },
+];
+
 export type EducationItem = {
   degree: string;
   institution: string;
