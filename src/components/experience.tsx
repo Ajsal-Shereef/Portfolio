@@ -29,29 +29,29 @@ export function Experience() {
             <li key={item.company} className="relative flex gap-4 pb-10 last:pb-0">
               <div className="flex w-8 shrink-0 flex-col items-center pt-1.5">
                 <span
-                  className="z-10 h-3 w-3 rounded-full border-2 border-slate-900 bg-sky-400/90 shadow-md shadow-sky-500/40"
+                  className="z-10 h-3 w-3 rounded-full border-2 border-stone-900 bg-amber-400/90 shadow-md shadow-amber-500/25"
                   aria-hidden
                 />
                 {idx < experience.length - 1 ? (
-                  <div className="mt-1 w-px flex-1 min-h-[1.5rem] bg-slate-800/80" />
+                  <div className="mt-1 w-px flex-1 min-h-[1.5rem] bg-stone-800/80" />
                 ) : null}
               </div>
               <div className="min-w-0 flex-1 glass-panel p-4 md:p-5">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
-                    <h3 className="text-sm font-semibold text-slate-100 md:text-base">
+                    <h3 className="text-sm font-semibold text-stone-100 md:text-base">
                       {item.role}
                     </h3>
-                    <p className="text-xs text-slate-400">{item.company}</p>
+                    <p className="text-xs text-stone-400">{item.company}</p>
                   </div>
-                  <span className="rounded-full bg-slate-900/80 px-3 py-1 text-[11px] text-slate-300">
+                  <span className="rounded-full bg-stone-900/80 px-3 py-1 text-[11px] text-stone-300">
                     {item.period}
                   </span>
                 </div>
-                <p className="mt-3 text-xs text-slate-300 md:text-sm">
+                <p className="mt-3 text-xs text-stone-300 md:text-sm">
                   {item.description}
                 </p>
-                <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-slate-500">
+                <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-stone-500">
                   {tags[idx]}
                 </p>
               </div>

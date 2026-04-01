@@ -21,16 +21,16 @@ export function Education() {
         <div className="grid gap-5 md:grid-cols-2">
           {education.map((item) => (
             <div key={item.degree} className="glass-panel p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
                 {item.institution}
               </p>
-              <h3 className="mt-1 text-sm font-semibold text-slate-100 md:text-base">
+              <h3 className="mt-1 text-sm font-semibold text-stone-100 md:text-base">
                 {item.degree}
               </h3>
-              <p className="mt-1 text-xs text-slate-400">{item.period}</p>
+              <p className="mt-1 text-xs text-stone-400">{item.period}</p>
               {item.thesis && (
-                <p className="mt-3 text-xs text-slate-300">
-                  <span className="font-semibold text-slate-200">Thesis:</span>{" "}
+                <p className="mt-3 text-xs text-stone-300">
+                  <span className="font-semibold text-stone-200">Thesis:</span>{" "}
                   {item.thesis}
                 </p>
               )}

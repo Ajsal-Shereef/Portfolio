@@ -14,8 +14,8 @@ export function About() {
           </h2>
           <p className="section-subtitle">{about}</p>
         </div>
-        <div className="glass-panel p-5 text-sm text-slate-300">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">
+        <div className="glass-panel p-5 text-sm text-stone-300">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
             Focus Areas
           </p>
           <ul className="space-y-2 text-xs md:text-sm">

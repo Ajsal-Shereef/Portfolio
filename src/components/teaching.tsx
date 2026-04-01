@@ -26,16 +26,16 @@ export function Teaching() {
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-100 md:text-base">
+                  <h3 className="text-sm font-semibold text-stone-100 md:text-base">
                     {item.role}
                   </h3>
-                  <p className="mt-1 text-xs text-slate-400">{item.institution}</p>
+                  <p className="mt-1 text-xs text-stone-400">{item.institution}</p>
                 </div>
-                <div className="mt-1 rounded-full bg-slate-900/80 px-3 py-1 text-[11px] text-sky-400/90">
+                <div className="mt-1 rounded-full bg-stone-900/80 px-3 py-1 text-[11px] text-amber-400/90">
                   Teaching
                 </div>
               </div>
-              <p className="mt-3 text-xs text-slate-300 md:text-sm">
+              <p className="mt-3 text-xs text-stone-300 md:text-sm">
                 {item.description}
               </p>
             </div>

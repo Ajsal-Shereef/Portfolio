@@ -13,11 +13,17 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       colors: {
-        background: "#020617",
-        foreground: "#e5e7eb",
+        background: "#1c1917",
+        foreground: "#f5f5f4",
+        muted: "#a8a29e",
+        surface: {
+          DEFAULT: "#292524",
+          elevated: "#44403c",
+        },
         accent: {
-          DEFAULT: "#38bdf8",
-          soft: "#0f172a",
+          DEFAULT: "#d4a574",
+          muted: "#b45309",
+          soft: "#292524",
         },
       },
       container: {

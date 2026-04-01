@@ -23,10 +23,10 @@ export function Projects() {
         <div className="grid gap-5 md:grid-cols-2">
           {projects.map((project) => (
             <div key={project.title} className="glass-panel flex flex-col p-5">
-              <h3 className="text-sm font-semibold text-slate-100 md:text-base">
+              <h3 className="text-sm font-semibold text-stone-100 md:text-base">
                 {project.title}
               </h3>
-              <p className="mt-2 text-xs text-slate-300 md:text-sm">
+              <p className="mt-2 text-xs text-stone-300 md:text-sm">
                 {project.description}
               </p>
               <div className="mt-4 flex flex-wrap gap-3 text-xs">
@@ -35,7 +35,7 @@ export function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 rounded-full border border-slate-700/80 bg-slate-950/60 px-3 py-1.5 font-medium text-sky-400 hover:border-sky-500/80 hover:text-sky-300"
+                    className="inline-flex items-center gap-1 rounded-full border border-stone-700/80 bg-stone-950/60 px-3 py-1.5 font-medium text-amber-400 hover:border-amber-600/70 hover:text-amber-200"
                   >
                     <span>GitHub</span>
                     <ArrowUpRight size={14} />
@@ -46,7 +46,7 @@ export function Projects() {
                     href={project.paper}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 rounded-full border border-slate-700/80 bg-slate-950/60 px-3 py-1.5 font-medium text-sky-400 hover:border-sky-500/80 hover:text-sky-300"
+                    className="inline-flex items-center gap-1 rounded-full border border-stone-700/80 bg-stone-950/60 px-3 py-1.5 font-medium text-amber-400 hover:border-amber-600/70 hover:text-amber-200"
                   >
                     <span>Paper</span>
                     <ArrowUpRight size={14} />
