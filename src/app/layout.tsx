@@ -38,12 +38,21 @@ export const metadata: Metadata = {
     siteName: "Ajsal Shereef Portfolio",
     locale: "en_AU",
     type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Ajsal Shereef Palattuparambil - AI & ML Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ajsal Shereef | AI & ML Portfolio",
     description:
       "Ph.D. candidate and ML engineer working on RL, GenAI, and Computer Vision.",
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
