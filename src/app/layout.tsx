@@ -2,15 +2,60 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ajsal-shereef.vercel.app";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Ajsal Shereef Palattuparambil | AI & ML",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Ajsal Shereef Palattuparambil | AI & ML",
+    template: "%s | Ajsal Shereef",
+  },
   description:
-    "Portfolio of Ajsal Shereef Palattuparambil – Ph.D. Candidate in Reinforcement Learning and Machine Learning Engineer.",
+    "Portfolio of Ajsal Shereef Palattuparambil, Ph.D. candidate in Reinforcement Learning and Machine Learning Engineer focused on Generative AI, RAG systems, and Computer Vision.",
+  keywords: [
+    "Ajsal Shereef",
+    "Reinforcement Learning Researcher",
+    "Machine Learning Engineer",
+    "Generative AI",
+    "RAG",
+    "Computer Vision",
+    "PhD AI Australia",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Ajsal Shereef Palattuparambil | AI & ML Portfolio",
+    description:
+      "Reinforcement Learning, Generative AI, and Computer Vision projects, publications, and experience.",
+    url: siteUrl,
+    siteName: "Ajsal Shereef Portfolio",
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ajsal Shereef | AI & ML Portfolio",
+    description:
+      "Ph.D. candidate and ML engineer working on RL, GenAI, and Computer Vision.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
