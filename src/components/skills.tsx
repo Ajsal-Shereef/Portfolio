@@ -14,10 +14,11 @@ export function Skills() {
           </h2>
           <p className="section-subtitle">
             A toolkit that spans algorithm design, large-scale learning systems,
-            and practical deployment on real hardware.
+            cloud deployment, and practical inference on real hardware.
           </p>
         </div>
 
+        {/* Row 1: Core Languages + Generative AI */}
         <div className="grid gap-5 md:grid-cols-3">
           <div className="glass-panel p-5">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
@@ -55,6 +56,24 @@ export function Skills() {
           </div>
         </div>
 
+        {/* Row 2: MLOps & Cloud (full width — the biggest addition) */}
+        <div className="glass-panel border-amber-700/30 bg-gradient-to-br from-stone-900/80 to-stone-900/50 p-5">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
+            {skills.mlopsCloud.title}
+          </p>
+          <div className="flex flex-wrap gap-1.5 text-xs text-stone-200">
+            {skills.mlopsCloud.items.map((item) => (
+              <span
+                key={item}
+                className="rounded-full bg-stone-900/80 px-3 py-1"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 3: CV, RL, Tools & Foundations */}
         <div className="grid gap-5 md:grid-cols-3">
           <div className="glass-panel p-5">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
@@ -80,17 +99,9 @@ export function Skills() {
 
           <div className="glass-panel p-5">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
-              {skills.deployment.title}
-            </p>
-            <ul className="space-y-1 text-xs text-stone-200">
-              {skills.deployment.items.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
-            <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
               {skills.toolsFoundations.title}
             </p>
-            <ul className="mt-1 space-y-1 text-xs text-stone-200">
+            <ul className="space-y-1 text-xs text-stone-200">
               {skills.toolsFoundations.items.map((item) => (
                 <li key={item}>• {item}</li>
               ))}

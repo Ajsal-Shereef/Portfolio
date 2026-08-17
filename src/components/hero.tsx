@@ -33,9 +33,10 @@ export function Hero() {
           </p>
 
           <p className="max-w-xl text-sm text-stone-400 sm:text-base">
-            I design, build, and deploy intelligent systems that connect
-            Reinforcement Learning, Generative AI, and Computer Vision—grounded
-            in rigorous mathematics and focused on real-world impact.
+            4+ years of applied experience shipping intelligent systems — from
+            RAG pipelines and autonomous agents to computer vision on edge
+            devices — grounded in rigorous mathematics and focused on real-world
+            impact.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 text-xs text-stone-400">
@@ -43,7 +44,7 @@ export function Hero() {
               Based in {hero.location}
             </span>
             <span className="rounded-full border border-stone-700/80 bg-stone-900/60 px-3 py-1">
-              AI • RL • Generative Models
+              AI • RL • GenAI • MLOps
             </span>
           </div>
 
@@ -65,13 +66,13 @@ export function Hero() {
             </Link>
 
             <a
-              href="/Ajsal_Shereef_Resume.pdf"
+              href="/Ajsal_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-stone-700/80 bg-stone-950/40 px-4 py-2.5 text-sm font-medium text-stone-200 transition hover:border-amber-600/70 hover:text-amber-200"
             >
               <FileDown size={16} />
-              Download Resume
+              Download CV
             </a>
           </div>
         </motion.div>
@@ -103,7 +104,7 @@ export function Hero() {
           <div className="mb-4 flex items-center justify-between gap-2 text-xs text-stone-400">
             <span className="font-medium text-stone-200">AI Focus Map</span>
             <span className="rounded-full bg-stone-900/80 px-2 py-0.5 text-[10px] uppercase tracking-wide text-amber-400/90">
-              RL • GenAI • CV
+              RL • GenAI • CV • MLOps
             </span>
           </div>
           <div className="grid grid-cols-2 gap-3 text-xs">
@@ -116,35 +117,40 @@ export function Hero() {
                 behaviours.
               </p>
               <div className="mt-2 h-1.5 w-full rounded-full bg-stone-800">
-                <div className="h-1.5 w-[86%] rounded-full bg-gradient-to-r from-amber-500 to-amber-400" />
+                <div className="h-1.5 w-[90%] rounded-full bg-gradient-to-r from-amber-500 to-amber-400" />
               </div>
             </div>
             <div className="space-y-2 rounded-xl bg-stone-900/60 p-3">
               <p className="text-[11px] font-medium text-stone-300">
-                Generative AI
+                Generative AI & LLMs
               </p>
               <p className="text-[11px] text-stone-400">
-                LLM tooling, RAG, and QLORA-tuned models for real workflows.
+                RAG pipelines, tool-using agents, and QLoRA fine-tuning.
+              </p>
+              <div className="mt-2 h-1.5 w-full rounded-full bg-stone-800">
+                <div className="h-1.5 w-[85%] rounded-full bg-gradient-to-r from-amber-500 to-orange-400/70" />
+              </div>
+            </div>
+            <div className="space-y-2 rounded-xl bg-stone-900/60 p-3">
+              <p className="text-[11px] font-medium text-stone-300">
+                Computer Vision
+              </p>
+              <p className="text-[11px] text-stone-400">
+                Segmentation, glare correction, and on-device inference.
               </p>
               <div className="mt-2 h-1.5 w-full rounded-full bg-stone-800">
                 <div className="h-1.5 w-[82%] rounded-full bg-gradient-to-r from-amber-500 to-orange-400/70" />
               </div>
             </div>
-            <div className="col-span-2 space-y-2 rounded-xl bg-stone-900/60 p-3">
+            <div className="space-y-2 rounded-xl bg-stone-900/60 p-3">
               <p className="text-[11px] font-medium text-stone-300">
-                Computer Vision on Edge
+                MLOps & Cloud
               </p>
               <p className="text-[11px] text-stone-400">
-                Segmentation, glare correction, and efficient models for
-                constrained devices.
+                Azure, Docker, CI/CD, IaC, and observability.
               </p>
-              <div className="mt-2 flex gap-2 text-[10px] text-stone-400">
-                <span className="rounded-full bg-stone-800/80 px-2 py-0.5">
-                  Quantization
-                </span>
-                <span className="rounded-full bg-stone-800/80 px-2 py-0.5">
-                  On-device benchmarking
-                </span>
+              <div className="mt-2 h-1.5 w-full rounded-full bg-stone-800">
+                <div className="h-1.5 w-[78%] rounded-full bg-gradient-to-r from-amber-500 to-orange-400/70" />
               </div>
             </div>
           </div>

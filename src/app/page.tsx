@@ -7,6 +7,7 @@ import { Projects } from "@/components/projects";
 import { Teaching } from "@/components/teaching";
 import { Education } from "@/components/education";
 import { Publications } from "@/components/publications";
+import { Awards } from "@/components/awards";
 import { Certifications } from "@/components/certifications";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -44,10 +45,10 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Research Publications",
-    itemListElement: publications.map((title, index) => ({
+    itemListElement: publications.map((pub, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: title,
+      name: pub.title,
     })),
   };
 
@@ -72,10 +73,11 @@ export default function HomePage() {
         <Skills />
         <Projects />
         <Experience />
-        <Teaching />
         <Education />
-        <Certifications />
+        <Awards />
         <Publications />
+        <Teaching />
+        <Certifications />
         <Contact />
       </main>
       <Footer />

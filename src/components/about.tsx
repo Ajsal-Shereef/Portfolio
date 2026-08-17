@@ -10,27 +10,36 @@ export function About() {
         <div>
           <p className="section-title">About</p>
           <h2 className="section-heading">
-            Bridging theory, models, and deployment.
+            Bridging theory, models, and production deployment.
           </h2>
           <p className="section-subtitle">{about}</p>
         </div>
-        <div className="glass-panel p-5 text-sm text-stone-300">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
-            Focus Areas
-          </p>
-          <ul className="space-y-2 text-xs md:text-sm">
-            <li>
-              • Reinforcement Learning for adaptive, user-aligned
-              decision-making.
-            </li>
-            <li>
-              • Generative AI systems with RAG pipelines and tool-using agents.
-            </li>
-            <li>
-              • Computer Vision models tailored for medical and edge settings.
-            </li>
-            <li>• Robust evaluation, benchmarking, and mathematical grounding.</li>
-          </ul>
+        <div>
+          <div className="glass-panel p-5 text-sm text-stone-300">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
+              Focus Areas
+            </p>
+            <ul className="space-y-2 text-xs md:text-sm">
+              <li>
+                • Reinforcement Learning for adaptive, user-aligned
+                decision-making.
+              </li>
+              <li>
+                • Generative AI systems with RAG pipelines and tool-using
+                agents.
+              </li>
+              <li>
+                • Computer Vision models tailored for medical and edge settings.
+              </li>
+              <li>
+                • MLOps & Cloud — Docker, Azure, CI/CD, IaC, and production
+                observability.
+              </li>
+              <li>
+                • Robust evaluation, benchmarking, and mathematical grounding.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </SectionShell>

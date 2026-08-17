@@ -12,11 +12,12 @@ export function Projects() {
         <div>
           <p className="section-title">Projects</p>
           <h2 className="section-heading">
-            Implementing adaptive and transferable RL systems.
+            From research prototypes to production-grade systems.
           </h2>
           <p className="section-subtitle">
-            Selected research codebases that operationalise ideas in dynamic
-            policy fusion and imagination-based knowledge transfer.
+            Selected codebases spanning applied ML engineering, LLM systems,
+            and reinforcement learning research — each shipped beyond the
+            notebook stage.
           </p>
         </div>
 
@@ -26,9 +27,20 @@ export function Projects() {
               <h3 className="text-sm font-semibold text-stone-100 md:text-base">
                 {project.title}
               </h3>
-              <p className="mt-2 text-xs text-stone-300 md:text-sm">
+              <p className="mt-2 flex-1 text-xs text-stone-300 md:text-sm">
                 {project.description}
               </p>
+              {/* Tech tags */}
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {project.techTags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-stone-800/80 px-2.5 py-0.5 text-[10px] font-medium text-amber-400/80"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <div className="mt-4 flex flex-wrap gap-3 text-xs">
                 {project.github ? (
                   <Link
@@ -60,4 +72,3 @@ export function Projects() {
     </SectionShell>
   );
 }
-

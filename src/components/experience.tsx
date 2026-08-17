@@ -4,7 +4,7 @@ import { SectionShell } from "./section-shell";
 import { experience } from "@/lib/data";
 
 const tags = [
-  "Edge CV • Medical Imaging • Benchmarking",
+  "Edge CV • Medical Imaging • Mobile Deployment • TFLite",
   "Predictive Analytics • Marketplace Modelling",
   "Sports Analytics • Environmental Monitoring",
 ] as const;
@@ -16,11 +16,12 @@ export function Experience() {
         <div>
           <p className="section-title">Experience</p>
           <h2 className="section-heading">
-            Applying research to real-world systems.
+            Shipping ML systems in production, not just prototypes.
           </h2>
           <p className="section-subtitle">
-            A track record of building intelligent systems in industry and
-            research labs, from medical imaging to call centre analytics.
+            A track record of building intelligent systems end-to-end — from
+            proof-of-concept through production deployment — across computer
+            vision, data science, and sports analytics.
           </p>
         </div>
 
@@ -48,9 +49,17 @@ export function Experience() {
                     {item.period}
                   </span>
                 </div>
-                <p className="mt-3 text-xs text-stone-300 md:text-sm">
-                  {item.description}
-                </p>
+                <ul className="mt-3 space-y-2">
+                  {item.bullets.map((bullet, bIdx) => (
+                    <li
+                      key={bIdx}
+                      className="flex gap-2 text-xs text-stone-300 md:text-sm"
+                    >
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-amber-500/70" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
                 <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-stone-500">
                   {tags[idx]}
                 </p>
