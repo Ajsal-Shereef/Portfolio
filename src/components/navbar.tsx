@@ -21,11 +21,11 @@ export function Navbar() {
     <header className="sticky top-0 z-30 border-b border-stone-800/80 bg-stone-950/70 backdrop-blur-lg">
       <nav className="container flex h-16 items-center justify-between gap-4">
         <Link href="#hero" className="group flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-tr from-amber-600 to-amber-500 text-xs font-semibold text-stone-950">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full border border-accent/50 text-xs font-semibold text-accent">
             AS
           </div>
           <div className="hidden flex-col leading-tight sm:flex">
-            <span className="text-sm font-semibold text-stone-100">
+            <span className="font-serif text-sm font-semibold text-stone-100">
               Ajsal Shereef
             </span>
             <span className="text-[11px] text-stone-400">

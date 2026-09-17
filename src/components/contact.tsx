@@ -88,7 +88,7 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-4 py-2.5 text-xs font-semibold text-stone-950 shadow-lg shadow-amber-900/25 transition hover:shadow-amber-900/35"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-4 py-2.5 text-xs font-semibold text-stone-950 transition hover:bg-accent/90"
             >
               <Send size={14} />
               Send via email

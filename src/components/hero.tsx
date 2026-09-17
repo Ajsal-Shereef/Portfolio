@@ -24,7 +24,7 @@ export function Hero() {
             Available for collaborations
           </span>
 
-          <h1 className="text-balance text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl lg:text-5xl">
+          <h1 className="text-balance font-serif text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl lg:text-5xl">
             {hero.name}
           </h1>
 
@@ -51,7 +51,7 @@ export function Hero() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="#publications"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 px-5 py-2.5 text-sm font-medium text-stone-950 shadow-lg shadow-amber-900/25 transition hover:shadow-amber-900/35"
+              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-stone-950 transition hover:bg-accent/90"
             >
               <ArrowDownToLine size={16} />
               View Publications

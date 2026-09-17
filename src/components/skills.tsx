@@ -26,10 +26,7 @@ export function Skills() {
             </p>
             <div className="flex flex-wrap gap-1.5 text-xs text-stone-200">
               {skills.coreLanguages.map((lang) => (
-                <span
-                  key={lang}
-                  className="rounded-full bg-stone-900/80 px-3 py-1"
-                >
+                <span key={lang} className="tag">
                   {lang}
                 </span>
               ))}
@@ -42,10 +39,7 @@ export function Skills() {
             </p>
             <div className="mb-2 flex flex-wrap gap-1.5 text-xs text-stone-200">
               {skills.generativeAI.items.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full bg-stone-900/80 px-3 py-1"
-                >
+                <span key={item} className="tag">
                   {item}
                 </span>
               ))}
@@ -63,10 +57,7 @@ export function Skills() {
           </p>
           <div className="flex flex-wrap gap-1.5 text-xs text-stone-200">
             {skills.mlopsCloud.items.map((item) => (
-              <span
-                key={item}
-                className="rounded-full bg-stone-900/80 px-3 py-1"
-              >
+              <span key={item} className="tag">
                 {item}
               </span>
             ))}

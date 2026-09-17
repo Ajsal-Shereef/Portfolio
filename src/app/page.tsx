@@ -1,17 +1,8 @@
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
-import { About } from "@/components/about";
-import { Skills } from "@/components/skills";
-import { Experience } from "@/components/experience";
-import { Projects } from "@/components/projects";
-import { Teaching } from "@/components/teaching";
-import { Education } from "@/components/education";
-import { Publications } from "@/components/publications";
-import { Awards } from "@/components/awards";
-import { Certifications } from "@/components/certifications";
-import { Contact } from "@/components/contact";
-import { Footer } from "@/components/footer";
+"use client";
+
+import { Scene } from "@/components/game3d/Scene";
 import { hero, publications } from "@/lib/data";
+import { KeyboardControls } from "@react-three/drei";
 
 export default function HomePage() {
   const siteUrl =
@@ -53,7 +44,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
@@ -66,21 +57,18 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(publicationsJsonLd) }}
       />
-      <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <Awards />
-        <Publications />
-        <Teaching />
-        <Certifications />
-        <Contact />
+      <main className="flex-1 w-full h-full">
+        <KeyboardControls
+          map={[
+            { name: "forward", keys: ["ArrowUp", "KeyW"] },
+            { name: "backward", keys: ["ArrowDown", "KeyS"] },
+            { name: "left", keys: ["ArrowLeft", "KeyA"] },
+            { name: "right", keys: ["ArrowRight", "KeyD"] },
+          ]}
+        >
+          <Scene />
+        </KeyboardControls>
       </main>
-      <Footer />
     </div>
   );
 }

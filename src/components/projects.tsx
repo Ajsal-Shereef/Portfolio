@@ -33,10 +33,7 @@ export function Projects() {
               {/* Tech tags */}
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {project.techTags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-stone-800/80 px-2.5 py-0.5 text-[10px] font-medium text-amber-400/80"
-                  >
+                  <span key={tag} className="tag">
                     {tag}
                   </span>
                 ))}
@@ -47,7 +44,7 @@ export function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 rounded-full border border-stone-700/80 bg-stone-950/60 px-3 py-1.5 font-medium text-amber-400 hover:border-amber-600/70 hover:text-amber-200"
+                    className="inline-flex items-center gap-1 rounded-md border border-stone-700/80 bg-stone-950/60 px-3 py-1.5 font-medium text-amber-400 hover:border-amber-600/70 hover:text-amber-200"
                   >
                     <span>GitHub</span>
                     <ArrowUpRight size={14} />
@@ -58,7 +55,7 @@ export function Projects() {
                     href={project.paper}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 rounded-full border border-stone-700/80 bg-stone-950/60 px-3 py-1.5 font-medium text-amber-400 hover:border-amber-600/70 hover:text-amber-200"
+                    className="inline-flex items-center gap-1 rounded-md border border-stone-700/80 bg-stone-950/60 px-3 py-1.5 font-medium text-amber-400 hover:border-amber-600/70 hover:text-amber-200"
                   >
                     <span>Paper</span>
                     <ArrowUpRight size={14} />

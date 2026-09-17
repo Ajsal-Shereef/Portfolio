@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 const siteUrl =
@@ -8,6 +8,11 @@ const siteUrl =
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -75,12 +80,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} min-h-screen bg-gradient-to-b from-stone-950 via-stone-950 to-stone-900 text-foreground`}
+        className={`${inter.variable} ${sourceSerif.variable} min-h-screen bg-gradient-to-b from-stone-950 via-stone-950 to-stone-900 text-foreground`}
       >
         <div className="relative min-h-screen">
-          <div className="pointer-events-none fixed inset-0 -z-10 opacity-50">
-            <div className="absolute -top-40 left-0 h-80 w-80 rounded-full bg-amber-600/15 blur-3xl" />
-            <div className="absolute top-40 right-0 h-80 w-80 rounded-full bg-orange-700/10 blur-3xl" />
+          <div className="pointer-events-none fixed inset-0 -z-10 opacity-30">
+            <div className="absolute -top-40 left-0 h-64 w-64 rounded-full bg-amber-600/10 blur-3xl" />
+            <div className="absolute top-40 right-0 h-64 w-64 rounded-full bg-orange-700/[0.06] blur-3xl" />
           </div>
           {children}
         </div>

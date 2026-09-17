@@ -10,7 +10,7 @@ export const hero = {
 };
 
 export const about =
-  "Ph.D. candidate in Artificial Intelligence with 4+ years of prior applied experience across Machine Learning Engineering, Computer Vision, and Data Science roles. I combine deep theoretical expertise in Reinforcement Learning with hands-on delivery of Generative AI systems — RAG pipelines, autonomous agents, and LLM fine-tuning (QLoRA) — through to production: containerization, cloud deployment, CI/CD, and observability. Proficient in Python, PyTorch, LangChain, and C++, with a rigorous mathematical foundation and a track record of shipping ML systems end-to-end, not just prototypes.";
+  "Welcome to the lab. I'm Ajsal, an AI Engineer and Ph.D. researcher obsessed with teaching machines how to think, adapt, and act. From fine-tuning LLMs and building autonomous LangChain agents, to optimizing computer vision pipelines, my work lives at the intersection of deep theoretical research and high-performance engineering. Dive into the kiosks to explore the systems I've built.";
 
 export const skills = {
   coreLanguages: ["Python", "C++", "R", "SQL"],
@@ -19,7 +19,7 @@ export const skills = {
     items: [
       "RAG (Retrieval-Augmented Generation)",
       "Agents & Tool Use",
-      "QLoRA Fine-tuning",
+      "LoRA Fine-tuning",
       "Prompt Engineering",
       "Vector Embeddings & Semantic Search",
       "Multi-modal Interaction (Text/Image/Audio)",
@@ -53,6 +53,10 @@ export const skills = {
       "Policy Optimisation",
       "Knowledge Transfer",
       "Human-Agent Interaction",
+      "Personalisation",
+      "Zero-shot Transfer",
+      "Policy Fusion",
+      "Reward Modeling",
     ],
   },
   mlopsCloud: {
@@ -62,8 +66,6 @@ export const skills = {
       "Infrastructure-as-Code (Bicep)",
       "GitHub Actions CI/CD",
       "Docker (multi-stage builds, orchestration)",
-      "FastAPI & RESTful API Design",
-      "React (full-stack prototyping)",
       "Azure Application Insights & OpenTelemetry",
       "On-device Deployment (Edge AI, TensorFlow Lite)",
       "Model Quantization & Performance Benchmarking",
@@ -74,6 +76,17 @@ export const skills = {
     title: "Tools & Foundations",
     items: [
       "Git",
+      "Linux/Bash",
+      "Jupyter",
+      "Weights & Biases",
+      "Scikit-Learn",
+      "Pandas & NumPy",
+      "Matplotlib & Seaborn",
+      "OpenCV",
+      "TensorFlow / TFLite",
+      "Hugging Face",
+      "FAISS",
+      "MLflow",
       "LaTeX",
       "PyTorch",
       "Probability & Statistics",
@@ -109,11 +122,31 @@ export const projects: Project[] = [
     github: "https://github.com/Ajsal-Shereef",
   },
   {
+    title: "PhD Literature Survey RAG Assistant",
+    description:
+      "An agentic Retrieval-Augmented Generation (RAG) pipeline built to navigate and query PhD literature using LangGraph and FastAPI. Features dynamic agentic routing, self-reflection (query rewriting and document grading), and persistent memory backed by a PostgreSQL checkpointer. Fully containerized with Docker Compose for seamless orchestration of the API, database, and local HuggingFace embedding models.",
+    techTags: ["LangGraph", "FastAPI", "PostgreSQL", "Docker", "FAISS"],
+    github: "https://github.com/Ajsal-Shereef",
+  },
+  {
     title: "LLM Engineering",
     description:
-      "Hands-on engineering of LLM-powered systems, covering RAG pipelines, tool-using agents, and safe deployment patterns from prototype to production.",
+      "Hands-on engineering of LLM-powered systems, covering RAG pipelines, tool-using agents, and safe deployment patterns.",
     techTags: ["LangChain", "RAG", "Agents", "Prompt Engineering"],
     github: "https://github.com/Ajsal-Shereef",
+  },
+  {
+    title: "RL Fine-Tuned LLM Agent for Code-Generation Tasks",
+    description:
+      "End-to-end reinforcement learning pipeline (PyTorch) that fine-tunes open-source LLMs via LoRA to generate working Python code as their output, using a PPO-style policy-optimization algorithm with KL-regularization against the base model for training stability. Reward pipeline executes each generated program against a held-out battery of test scenarios and scores it on task success. Includes a secure sandbox for safely executing untrusted, LLM-generated code (restricted execution, timeout safeguards, isolated state per run), with LoRA and training hyperparameters tuned across multiple open-source model sizes (3B-8B) and training monitored via Weights & Biases.",
+    techTags: [
+      "Reinforcement Learning",
+      "LoRA",
+      "PyTorch",
+      "Reward Modeling",
+      "Sandboxing",
+      "Weights & Biases",
+    ],
   },
   {
     title: "PRISM: Policy Reuse via Imagined Semantic Mappings",
@@ -149,6 +182,7 @@ export type ExperienceItem = {
 };
 
 export const experience: ExperienceItem[] = [
+
   {
     role: "Machine Learning Engineer",
     company: "Trenser Technology Solutions",
