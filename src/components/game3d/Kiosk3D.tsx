@@ -14,9 +14,10 @@ interface Kiosk3DProps {
   isActive: boolean;
   isAnyActive: boolean;
   onActivate: (id: string | null) => void;
+  isVisited: boolean;
 }
 
-export function Kiosk3D({ id, position, title, color, avatarPosRef, isActive, isAnyActive, onActivate }: Kiosk3DProps) {
+export function Kiosk3D({ id, position, title, color, avatarPosRef, isActive, isAnyActive, onActivate, isVisited }: Kiosk3DProps) {
   const meshRef = useRef<THREE.Mesh>(null);
   const [hovered, setHovered] = useState(false);
 
@@ -80,10 +81,10 @@ export function Kiosk3D({ id, position, title, color, avatarPosRef, isActive, is
         <meshStandardMaterial 
           color={color} 
           emissive={color}
-          emissiveIntensity={hovered || isActive ? 2 : 0.6}
-          wireframe={true}
+          emissiveIntensity={hovered || isActive ? 2 : (isVisited ? 1.5 : 0.6)}
+          wireframe={!isVisited}
         />
-        {(hovered || isActive) && <pointLight color={color} intensity={4} distance={20} />}
+        {(hovered || isActive || isVisited) && <pointLight color={color} intensity={isVisited && !hovered && !isActive ? 1.5 : 4} distance={20} />}
       </mesh>
 
       {/* Title Label */}
@@ -92,8 +93,8 @@ export function Kiosk3D({ id, position, title, color, avatarPosRef, isActive, is
           <div 
             className="px-4 py-2 text-sm font-bold tracking-widest text-white bg-black/90 rounded-full border whitespace-nowrap shadow-xl transition-all"
             style={{ 
-              borderColor: hovered || isActive ? color : 'rgba(255,255,255,0.2)',
-              boxShadow: hovered || isActive ? `0 0 20px ${color}` : 'none'
+              borderColor: hovered || isActive || isVisited ? color : 'rgba(255,255,255,0.2)',
+              boxShadow: hovered || isActive || isVisited ? `0 0 20px ${color}` : 'none'
             }}
           >
             {title}

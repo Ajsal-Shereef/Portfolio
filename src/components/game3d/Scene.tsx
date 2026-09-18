@@ -202,6 +202,7 @@ export function Scene() {
             isActive={activeKiosk === kiosk.id}
             isAnyActive={activeKiosk !== null}
             onActivate={handleKioskActivate}
+            isVisited={visitedKiosks.has(kiosk.id)}
           />
         ))}
       </Canvas>
